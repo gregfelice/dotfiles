@@ -1,0 +1,127 @@
+#==========================================================================
+
+alias t='tmux a'
+
+alias d3='cd /sites/www.constantlabs.com/web'
+
+alias d1="cd $HOME/dev/drericawaters_store/drericawaters_store"
+alias d2="cd $HOME/dev/drericawaters_2.0/drericawaters_2.0"
+
+
+#==========================================================================
+
+alias vi='vim'
+
+alias rpms='rpm -qa --last'
+alias deps='rpm -qR'
+alias bong='date +"Hello%t Date is %D %n%t Time is %I:%M:%S %p in %Z time zone."'
+
+alias mutt='mutt -f $HOME/Maildir'
+alias mail='mailx'
+
+#==========================================================================
+
+alias ls='ls -tF --color'
+
+
+alias glt='git log --pretty=format:"%h - %an, %ar : %s"'
+alias gll='git log --pretty=format:"%h %s" --graph'
+alias gso='git remote show origin'
+alias glp='git log -p'
+alias gls='git log --stat'
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+alias sha1='openssl sha1'
+alias mount='mount |column -t'
+alias h='history'
+alias j='jobs -l'
+
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
+# Do not wait interval 1 second, go fast #
+alias fastping='ping -c 100 -s.2'
+
+alias ports='netstat -tulanp'
+
+## shortcut  for iptables and pass it via sudo#
+alias ipt='sudo /sbin/iptables'
+ 
+# display all rules #
+alias iptlist='sudo /sbin/iptables -L -n -v --line-numbers'
+alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
+alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
+alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
+alias firewall=iptlist
+
+# get web server headers #
+alias header='curl -I'
+ 
+# find out if remote server supports gzip / mod_deflate or not #
+alias headerc='curl -I --compress'
+
+# do not delete / or prompt if deleting more than 3 files at a time #
+alias rm='rm -I --preserve-root'
+ 
+# confirmation #
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+ 
+# Parenting changing perms on / #
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+# become root #
+alias root='sudo -i'
+alias su='sudo -i'
+
+# reboot / halt / poweroff
+alias reboot='sudo /sbin/reboot'
+# alias poweroff='sudo /sbin/poweroff'
+# alias halt='sudo /sbin/halt'
+# alias shutdown='sudo /sbin/shutdown'
+
+## All of our servers eth1 is connected to the Internets via vlan / router etc  ##
+alias dnstop='dnstop -l 5  eth0'
+alias vnstat='vnstat -i eth0'
+alias iftop='iftop -i eth0'
+alias tcpdump='tcpdump -i eth0'
+alias ethtool='ethtool eth0'
+ 
+# work on wlan0 by default #
+# Only useful for laptop as all servers are without wireless interface
+alias iwconfig='iwconfig wlan0'
+
+## pass options to free ## 
+alias meminfo='free -m -l -t'
+ 
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+ 
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+ 
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+ 
+## older system use /proc/cpuinfo ##
+##alias cpuinfo='less /proc/cpuinfo' ##
+ 
+## get GPU ram on desktop / laptop## 
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+
+## this one saved by butt so many times ##
+alias wget='wget -c'
+
+
