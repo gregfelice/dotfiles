@@ -53,6 +53,10 @@ plugins=(git)
 
 # User configuration
 
+# PATH=$PATH:$HOME/.rvm/bin:$HOME/bin; export PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 export PATH="/home/gregf/.rvm/gems/ruby-2.1.5/bin:/home/gregf/.rvm/gems/ruby-2.1.5@global/bin:/home/gregf/.rvm/rubies/ruby-2.1.5/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/gregf/.rvm/bin:/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/gregf/.local/bin:/home/gregf/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
