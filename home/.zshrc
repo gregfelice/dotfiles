@@ -92,3 +92,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# homeshick dotfile management
+homeshick=$HOME/.homesick/repos/homeshick/homeshick.sh
+if [ -f $homeshick ]
+then
+    source $homeshick
+fi
+
+# local source file not checked into scm
+localsource=$HOME/.localsource
+if [ -f $localsource ]
+then
+    source $localsource
+fi
