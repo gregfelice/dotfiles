@@ -6,7 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="ys"
-ZSH_THEME="minimal"
+# ZSH_THEME="minimal"
+ZSH_THEME="mortalscumbag"
 # ZSH_THEME="avit"
 # ZSH_THEME="af-magic"
 # ZSH_THEME="robbyrussell"
@@ -106,3 +107,6 @@ if [ -f $localsource ]
 then
     source $localsource
 fi
+
+# start up ssh agent
+source .sshagent
