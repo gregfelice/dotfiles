@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 homeshick=$HOME/.homesick/repos/homeshick/homeshick.sh
 if [ -f $homeshick ]
 then
+    echo "sourcing homeshick.sh..."
     source $homeshick
 fi
 
@@ -105,6 +106,7 @@ fi
 localsource=$HOME/.localsource
 if [ -f $localsource ]
 then
+    echo "sourcing localsource..."
     source $localsource
 fi
 
