@@ -2,11 +2,9 @@
 
 alias t='tmux a'
 
-alias d3='cd /sites/www.constantlabs.com/web'
+alias d1='cd /sites/www.constantlabs.com/web'
 
-alias d1="cd $HOME/dev/drericawaters_store/drericawaters_store"
-alias d2="cd $HOME/dev/drericawaters_2.0/drericawaters_2.0"
-
+alias rmt="rm -f *~"
 
 #==========================================================================
 
@@ -123,5 +121,3 @@ alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 
 ## this one saved by butt so many times ##
 alias wget='wget -c'
-
-

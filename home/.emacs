@@ -8,12 +8,12 @@
 
 ;; (load-theme 'darcula t)
 ;; (load-theme 'clues t)
-(load-theme 'mustang t)
+;; (load-theme 'mustang t)
 ;; (load-theme 'calmer-forest t)
 ;; (load-theme 'noctilux t)
 ;; (load-theme 'lush t)
 ;; (load-theme 'inkpot t)
-;; (load-theme 'zen-and-art t)
+(load-theme 'zen-and-art t)
 ;; (load-theme 'soft-charcoal t)
 
 ;; https://github.com/Bruce-Connor/smart-mode-line

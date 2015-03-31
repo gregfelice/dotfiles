@@ -7,10 +7,13 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="ys"
 # ZSH_THEME="minimal"
-ZSH_THEME="mortalscumbag"
+# ZSH_THEME="mortalscumbag"
 # ZSH_THEME="avit"
 # ZSH_THEME="af-magic"
 # ZSH_THEME="robbyrussell"
+
+ZSH_THEME="blinks"
+# SOLARIZED_THEME="light"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -112,3 +115,6 @@ fi
 
 # start up ssh agent
 source .sshagent
+
+# all sorts of aliases
+source .alii
