@@ -13,7 +13,7 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 
 ZSH_THEME="blinks"
-# SOLARIZED_THEME="light"
+SOLARIZED_THEME="light"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -61,7 +61,10 @@ plugins=(git)
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export PATH="/home/gregf/.rvm/gems/ruby-2.1.5/bin:/home/gregf/.rvm/gems/ruby-2.1.5@global/bin:/home/gregf/.rvm/rubies/ruby-2.1.5/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/gregf/.rvm/bin:/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/gregf/.local/bin:/home/gregf/bin"
+RVM_BIN=$HOME/.rvm/bin
+RUBY_BIN=$HOME/.rvm/gems/ruby-2.2.1/bin
+
+export PATH="$RUBY_BIN:$HOME/bin:$RVM_BIN:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/usr/bin:/usr/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
