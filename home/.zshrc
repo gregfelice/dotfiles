@@ -13,7 +13,7 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 
 ZSH_THEME="blinks"
-SOLARIZED_THEME="light"
+# SOLARIZED_THEME="light"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -105,7 +105,6 @@ export EDITOR='emacs'
 homeshick=$HOME/.homesick/repos/homeshick/homeshick.sh
 if [ -f $homeshick ]
 then
-    echo "sourcing homeshick.sh..."
     source $homeshick
 fi
 
@@ -113,7 +112,6 @@ fi
 localsource=$HOME/.localsource
 if [ -f $localsource ]
 then
-    echo "sourcing localsource..."
     source $localsource
 fi
 
@@ -122,3 +120,6 @@ source .sshagent
 
 # all sorts of aliases
 source .alii
+
+# display motd
+cat /etc/motd
