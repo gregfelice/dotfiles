@@ -21,6 +21,7 @@ alias mail='mailx'
 
 alias ls='ls -tF --color'
 
+alias rmt='rm *~'
 
 alias glt='git log --pretty=format:"%h - %an, %ar : %s"'
 alias gll='git log --pretty=format:"%h %s" --graph'
