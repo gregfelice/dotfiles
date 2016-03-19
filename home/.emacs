@@ -12,13 +12,13 @@
 ;; various cool themes
 ;; (load-theme 'darcula t)
 ;; (load-theme 'clues t)
-;; (load-theme 'mustang t)
+(load-theme 'mustang t)
 ;; (load-theme 'calmer-forest t)
 ;; (load-theme 'noctilux t)
 ;; (load-theme 'lush t)
 ;; (load-theme 'inkpot t)
 ;; (load-theme 'atom-light t)
-(load-theme 'zen-and-art t)
+;; (load-theme 'zen-and-art t)
 ;; (load-theme 'soft-charcoal t)
 
 ;; https://github.com/Bruce-Connor/smart-mode-line
@@ -30,9 +30,10 @@
 (add-to-list 'auto-mode-alist '("\\.feature\\'" . feature-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . angular-mode))
 
 ;; disable mode line
-(setq-default mode-line-format nil)
+;;(setq-default mode-line-format nil)
 
 ;; disable menu bar
 (menu-bar-mode -99)
