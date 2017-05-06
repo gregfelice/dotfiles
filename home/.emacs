@@ -13,13 +13,15 @@
 ;; (load-theme 'darcula t)
 ;; (load-theme 'clues t)
 ;; (load-theme 'mustang t)
-;; (load-theme 'calmer-forest t)
+(load-theme 'calmer-forest t)
 ;; (load-theme 'noctilux t)
 ;; (load-theme 'lush t)
 ;; (load-theme 'inkpot t)
-;; (load-theme 'atom-light t)
-(load-theme 'zen-and-art t)
+;; (load-theme 'sunny-day t)
+;; (load-theme 'zen-and-art t)
 ;; (load-theme 'soft-charcoal t)
+;; (load-theme 'badwolf t)
+
 
 ;; https://github.com/Bruce-Connor/smart-mode-line
 ;; (setq sml/theme 'dark)
@@ -32,13 +34,19 @@
 (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
 
 ;; disable mode line
-(setq-default mode-line-format nil)
+;; (setq-default mode-line-format nil)
 
 ;; disable menu bar
 (menu-bar-mode -99)
 
 ;; javascript indent
 (setq js-indent-level 2)
+
+;; go indent
+(defun my-go-mode-hook () 
+  (add-hook 'before-save-hook 'gofmt-before-save) 
+  (setq tab-width 4 indent-tabs-mode 0)) 
+(add-hook 'go-mode-hook 'my-go-mode-hook) 
 
 ;; multi-web mode
 (require 'multi-web-mode)
