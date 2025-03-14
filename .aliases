@@ -1,0 +1,10 @@
+
+alias emacs='emacs -nw'
+
+# https://github.com/eza-community/eza
+alias ls='eza -F'
+alias ll='eza -l -F'
+alias lt='eza -l -s=changed -r -F'
+alias la='eza -a -l -s=changed -r -F'
+
+# echo "aliases loaded from .aliases file."
