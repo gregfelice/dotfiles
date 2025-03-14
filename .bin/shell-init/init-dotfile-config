@@ -6,6 +6,7 @@
 #
 # git init --bare .dotfiles
 # config add .bashrc .zshrc .emacs.d .config/ 
+# config commit -m "initial commit"
 # config remote add origin <your_remote_repo_url>
 # config branch -M main
 # config push -u origin main 
