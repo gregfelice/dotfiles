@@ -1,0 +1,34 @@
+
+# all aliases go here.
+source $HOME/.aliases
+
+# also configure this on iterm2 for happiness
+export TERM="xterm-256color"
+
+#
+# Standard Local Bin Directory:
+#   $HOME/.bin
+# Legacy Local Bin Directories
+#   $HOME/.local
+#   $HOME/bin
+#
+LOCAL_PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.bin
+
+# Location of custom shell init scripts
+INI=$HOME/.bin/shell-init
+
+# Define any aliases in the $HOME/.aliases script.
+source $INI/init-python            # venv, pyenv, etc
+source $INI/init-emacs             # daemon configs, executable paths
+source $INI/init-eza               # custom ls package
+source $INI/init-java              # local jre
+source $INI/init-llms              # anything related to local or remote llms
+source $INI/init-node              # node package managers, runtimes
+source $INI/init-ssh               # ssh-agent configs, etc
+source $INI/init-dotfile-config    # git aliases to manage dotfile versioning
+
+print -P "%F{yellow}--------------------------------------------------------------------------------------------------%f"
+echo "\n"
+fortune
+echo "\n"
+print -P "%F{yellow}--------------------------------------------------------------------------------------------------%f"

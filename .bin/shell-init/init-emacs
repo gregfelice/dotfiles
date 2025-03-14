@@ -1,0 +1,43 @@
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='emacs'
+else
+    export EDITOR='emacs'
+fi
+
+EMACS_BIN_PATH=/Applications/Emacs.app/Contents/MacOS
+
+export PATH=$EMACS_BIN_PATH:$PATH
+
+#################################################
+# customized emacs daemon
+#################################################
+EMACS_PATH=/opt/homebrew/bin
+EMACS_PID=Emacs-arm64-11
+EMACS_BIN=Emacs
+
+# Function to start the Emacs daemon
+start_emacs_daemon() {
+    if ! pgrep -x "$EMACS_PID" > /dev/null; then
+        $EMACS_PATH/$EMACS_BIN --daemon &
+        echo "Emacs daemon started."
+    else
+        echo "Emacs daemon is already running."
+    fi
+}
+
+# Function to stop the Emacs daemon
+stop_emacs_daemon() {
+    if pgrep -x "$EMACS_PID" > /dev/null; then
+        $EMACS_PATH/emacsclient -e "(kill-emacs)" > /dev/null
+        echo "Emacs daemon stopped."
+    else
+        echo "Emacs daemon is not running."
+    fi
+}
+
+if pgrep -x "$EMACS_PID" > /dev/null; then
+    print -P "%F{yellow}Emacs daemon started.%f"
+else
+    print -P "%F{red}Emacs daemon not started.%f"
+fi

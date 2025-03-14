@@ -1,0 +1,15 @@
+
+# git mechanism to version control dotfiles and dot-directories.
+
+###################################################################
+# config dot file usage:
+#
+# git init --bare .dotfiles
+# config add .bashrc .zshrc .emacs.d .config/ 
+# config remote add origin <your_remote_repo_url>
+# config branch -M main
+# config push -u origin main 
+###################################################################
+
+alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+

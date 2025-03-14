@@ -1,0 +1,9 @@
+
+
+
+# Not using ssh-agent at this time.
+#
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_ed25519  # Or the path to your private key file
+
+

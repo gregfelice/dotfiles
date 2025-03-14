@@ -1,0 +1,31 @@
+
+export PKG_CONFIG_PATH="/opt/homebrew/opt/tcl-tk/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+# brew version of python, etc
+# PYTHON_PATH=/opt/homebrew/opt/python@3.12/libexec/bin
+
+# PyEnv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+autoload -Uz add-zsh-hook
+
+add-zsh-hook chpwd activate_venv
+
+activate_venv() {
+    if [[ -d .venv ]]; then
+        source .venv/bin/activate
+	      export LOCAL_PYTHONPATH=`pwd`
+	      export GLOBAL_PYTHONPATH="$PYTHONPATH"
+	      export PYTHONPATH="$LOCAL_PYTHONPATH:$GLOBAL_PYTHONPATH"
+	      print -P "%F{yellow}pythonpath: $PYTHONPATH%f"
+    elif [[ $VIRTUAL_ENV != "" ]]; then
+        deactivate
+	      if [[ -v GLOBAL_PYTHONPATH ]]; then
+	          export PYTHONPATH="$GLOBAL_PYTHONPATH"
+	      fi
+	      print -P "%F{yellow}pythonpath: $PYTHONPATH%f"
+    fi
+}
+
