@@ -621,10 +621,51 @@ This function is called at the very end of Spacemacs initialization."
    ;; Your init file should contain only one such instance.
    ;; If there is more than one, they won't work right.
    '(custom-safe-themes
-     '("8dbbcb2b7ea7e7466ef575b60a92078359ac260c91fe908685b3983ab8e20e3f" "7fd8b914e340283c189980cd1883dbdef67080ad1a3a9cc3df864ca53bdc89cf" default))
+     '("09b833239444ac3230f591e35e3c28a4d78f1556b107bafe0eb32b5977204d93"
+       "8dbbcb2b7ea7e7466ef575b60a92078359ac260c91fe908685b3983ab8e20e3f"
+       "7fd8b914e340283c189980cd1883dbdef67080ad1a3a9cc3df864ca53bdc89cf" default))
    '(org-modern-todo-faces '(("\"IN-PROGRESS\"" . "yellow")))
    '(package-selected-packages
-     '(yaml-mode org-modern evil-org gnuplot helm-org-rifle org org-cliplink org-contrib org-download org-mime org-pomodoro alert log4e gntp org-present org-projectile org-project-capture org-category-capture org-rich-yank powerline doom-modeline shrink-path nerd-icons cl-lib yasnippet-snippets ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vundo volatile-highlights vim-powerline vi-tilde-fringe uuidgen use-package unfill undo-fu-session undo-fu treemacs-projectile treemacs-persp treemacs-icons-dired toc-org term-cursor tagedit symon symbol-overlay string-inflection string-edit-at-point sphinx-doc spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline space-doc slim-mode scss-mode sass-mode rjsx-mode restart-emacs request rainbow-delimiters quickrun pytest pylookup pyenv-mode pydoc py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements pcre2el password-generator paradox overseer org-superstar open-junk-file npm-mode nodejs-repl nameless mwim multi-line markdown-toc macrostep lsp-ui lsp-treemacs lsp-origami lorem-ipsum livid-mode live-py-mode link-hint json-reformat json-navigator json-mode js2-refactor js-doc inspector info+ indent-guide impatient-mode hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-lsp helm-descbinds helm-css-scss helm-company helm-comint helm-c-yasnippet helm-ag google-translate golden-ratio gh-md flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr emmet-mode elisp-slime-nav elisp-demos elisp-def editorconfig edit-indirect dumb-jump drag-stuff dotenv-mode disable-mouse dired-quick-sort diminish devdocs define-word cython-mode company-web column-enforce-mode code-cells clean-aindent-mode centered-cursor-mode auto-yasnippet auto-highlight-symbol auto-compile all-the-icons aggressive-indent ace-link ace-jump-helm-line))
+     '(yaml-mode org-modern evil-org gnuplot helm-org-rifle org org-cliplink
+                 org-contrib org-download org-mime org-pomodoro alert log4e gntp
+                 org-present org-projectile org-project-capture
+                 org-category-capture org-rich-yank powerline doom-modeline
+                 shrink-path nerd-icons cl-lib yasnippet-snippets ws-butler
+                 writeroom-mode winum which-key wgrep web-mode web-beautify vundo
+                 volatile-highlights vim-powerline vi-tilde-fringe uuidgen
+                 use-package unfill undo-fu-session undo-fu treemacs-projectile
+                 treemacs-persp treemacs-icons-dired toc-org term-cursor tagedit
+                 symon symbol-overlay string-inflection string-edit-at-point
+                 sphinx-doc spacemacs-whitespace-cleanup spacemacs-purpose-popwin
+                 spaceline space-doc slim-mode scss-mode sass-mode rjsx-mode
+                 restart-emacs request rainbow-delimiters quickrun pytest pylookup
+                 pyenv-mode pydoc py-isort pug-mode prettier-js popwin poetry
+                 pippel pipenv pip-requirements pcre2el password-generator paradox
+                 overseer org-superstar open-junk-file npm-mode nodejs-repl
+                 nameless mwim multi-line markdown-toc macrostep lsp-ui
+                 lsp-treemacs lsp-origami lorem-ipsum livid-mode live-py-mode
+                 link-hint json-reformat json-navigator json-mode js2-refactor
+                 js-doc inspector info+ indent-guide impatient-mode hybrid-mode
+                 hungry-delete holy-mode hl-todo highlight-parentheses
+                 highlight-numbers highlight-indentation hide-comnt helm-xref
+                 helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile
+                 helm-org helm-mode-manager helm-make helm-lsp helm-descbinds
+                 helm-css-scss helm-company helm-comint helm-c-yasnippet helm-ag
+                 google-translate golden-ratio gh-md flycheck-pos-tip
+                 flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse
+                 expand-region evil-visualstar evil-visual-mark-mode
+                 evil-unimpaired evil-tutor evil-textobj-line evil-surround
+                 evil-numbers evil-nerd-commenter evil-mc evil-matchit
+                 evil-lisp-state evil-lion evil-indent-plus evil-iedit-state
+                 evil-goggles evil-exchange evil-evilified-state evil-escape
+                 evil-collection evil-cleverparens evil-args evil-anzu
+                 eval-sexp-fu emr emmet-mode elisp-slime-nav elisp-demos elisp-def
+                 editorconfig edit-indirect dumb-jump drag-stuff dotenv-mode
+                 disable-mouse dired-quick-sort diminish devdocs define-word
+                 cython-mode company-web column-enforce-mode code-cells
+                 clean-aindent-mode centered-cursor-mode auto-yasnippet
+                 auto-highlight-symbol auto-compile all-the-icons
+                 aggressive-indent ace-link ace-jump-helm-line))
    '(warning-suppress-types '((use-package) (use-package) (use-package))))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.

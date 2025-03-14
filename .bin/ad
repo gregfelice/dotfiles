@@ -3,111 +3,111 @@
 # Script: aa (systemctl/journalctl shortcut) - Linux Only
 
 usage() {
-  echo "Usage: aa [options] <service_name>"
-  echo "Options:"
-  echo "  -s <service_name>: systemctl status"
-  echo "  -e <service_name>: systemctl is-enabled"
-  echo "  -l <service_name>: systemctl list-units <service_name>"
-  echo "  -f <service_name>: systemctl --failed <service_name>"
-  echo "  -j <service_name>: journalctl -u <service_name>"
-  echo "  -r <service_name>: journalctl -xeu <service_name>"
-  echo "  -n <number> <service_name>: journalctl -n <number> -u <service_name>"
-  echo "  -a: List all active services"
-  echo "  -i: List all enabled services"
-  echo "  -d: List all disabled services"
-  echo "  -F: List all failed services"
-  echo "  -E: Display recent system errors"
-  echo "  -W: Display recent system warnings"
-  echo "  -R: Display recent system critical messages"
-  echo "  -L: Display recent kernel messages"
-  echo "  -h: Display this help message"
-  exit 1
+    echo "Usage: ad [options] <service_name>"
+    echo "Options:"
+    echo "  -s <service_name>: systemctl status"
+    echo "  -e <service_name>: systemctl is-enabled"
+    echo "  -l <service_name>: systemctl list-units <service_name>"
+    echo "  -f <service_name>: systemctl --failed <service_name>"
+    echo "  -j <service_name>: journalctl -u <service_name>"
+    echo "  -r <service_name>: journalctl -xeu <service_name>"
+    echo "  -n <number> <service_name>: journalctl -n <number> -u <service_name>"
+    echo "  -a: List all active services"
+    echo "  -i: List all enabled services"
+    echo "  -d: List all disabled services"
+    echo "  -F: List all failed services"
+    echo "  -E: Display recent system errors"
+    echo "  -W: Display recent system warnings"
+    echo "  -R: Display recent system critical messages"
+    echo "  -L: Display recent kernel messages"
+    echo "  -h: Display this help message"
+    exit 1
 }
 
 if [ $# -eq 0 ]; then
-  usage
+    usage
 fi
 
 while getopts "s:e:l:f:j:r:n:aidFEWRLh" opt; do
-  case "$opt" in
-    s)
-      service_name="$OPTARG"
-      sudo systemctl status "$service_name"
-      ;;
-    e)
-      service_name="$OPTARG"
-      sudo systemctl is-enabled "$service_name"
-      ;;
-    l)
-      service_name="$OPTARG"
-      sudo systemctl list-units "$service_name"
-      ;;
-    f)
-      service_name="$OPTARG"
-      sudo systemctl --failed "$service_name"
-      ;;
-    j)
-      service_name="$OPTARG"
-      sudo journalctl -u "$service_name"
-      ;;
-    r)
-      service_name="$OPTARG"
-      sudo journalctl -xeu "$service_name"
-      ;;
-    n)
-      lines="$OPTARG"
-      shift # Shift off the number
-      service_name="$1"
-      sudo journalctl -n "$lines" -u "$service_name"
-      ;;
-    a)
-      echo "Active Services:"
-      sudo systemctl list-units --type=service --state=active --no-pager
-      ;;
-    i)
-      echo "Enabled Services:"
-      sudo systemctl list-unit-files --type=service --state=enabled --no-pager
-      ;;
-    d)
-      echo "Disabled Services:"
-      sudo systemctl list-unit-files --type=service --state=disabled --no-pager
-      ;;
-    F)
-      echo "Failed Services:"
-      sudo systemctl --failed --no-pager
-      ;;
-    E)
-      echo "Recent System Errors:"
-      sudo journalctl -p err -xe --no-pager
-      ;;
-    W)
-      echo "Recent System Warnings:"
-      sudo journalctl -p warning -xe --no-pager
-      ;;
-    R)
-      echo "Recent System Critical Messages:"
-      sudo journalctl -p crit -xe --no-pager
-      ;;
-    L)
-      echo "Recent Kernel Messages:"
-      sudo journalctl -k -xe --no-pager
-      ;;
-    h)
-      usage
-      ;;
-    \?)
-      usage
-      ;;
-    :)
-      echo "Option -$OPTARG requires an argument." >&2
-      usage
-      ;;
-  esac
+    case "$opt" in
+        s)
+            service_name="$OPTARG"
+            sudo systemctl status "$service_name"
+            ;;
+        e)
+            service_name="$OPTARG"
+            sudo systemctl is-enabled "$service_name"
+            ;;
+        l)
+            service_name="$OPTARG"
+            sudo systemctl list-units "$service_name"
+            ;;
+        f)
+            service_name="$OPTARG"
+            sudo systemctl --failed "$service_name"
+            ;;
+        j)
+            service_name="$OPTARG"
+            sudo journalctl -u "$service_name"
+            ;;
+        r)
+            service_name="$OPTARG"
+            sudo journalctl -xeu "$service_name"
+            ;;
+        n)
+            lines="$OPTARG"
+            shift # Shift off the number
+            service_name="$1"
+            sudo journalctl -n "$lines" -u "$service_name"
+            ;;
+        a)
+            echo "Active Services:"
+            sudo systemctl list-units --type=service --state=active --no-pager
+            ;;
+        i)
+            echo "Enabled Services:"
+            sudo systemctl list-unit-files --type=service --state=enabled --no-pager
+            ;;
+        d)
+            echo "Disabled Services:"
+            sudo systemctl list-unit-files --type=service --state=disabled --no-pager
+            ;;
+        F)
+            echo "Failed Services:"
+            sudo systemctl --failed --no-pager
+            ;;
+        E)
+            echo "Recent System Errors:"
+            sudo journalctl -p err -xe --no-pager
+            ;;
+        W)
+            echo "Recent System Warnings:"
+            sudo journalctl -p warning -xe --no-pager
+            ;;
+        R)
+            echo "Recent System Critical Messages:"
+            sudo journalctl -p crit -xe --no-pager
+            ;;
+        L)
+            echo "Recent Kernel Messages:"
+            sudo journalctl -k -xe --no-pager
+            ;;
+        h)
+            usage
+            ;;
+        \?)
+            usage
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            usage
+            ;;
+    esac
 done
 
 shift $((OPTIND - 1))
 
 if [ -n "$1" ] && [ -z "$service_name" ]; then
-  echo "Error: Service name must be provided with an option."
-  usage
+    echo "Error: Service name must be provided with an option."
+    usage
 fi

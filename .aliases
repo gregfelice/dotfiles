@@ -1,5 +1,21 @@
 
-alias emacs='emacs -nw'
+
+OS=$(uname -s)
+
+case "$OS" in
+    Linux)
+        alias ad="$HOME/.bin/ad"   # run the linux version of my admin helper.
+        ;;
+    Darwin)
+        alias ad="$HOME/.bin/mad"  # run the pacos version of my admin helper.
+        ;;
+    *)
+        echo "Operating system '$OS' not recognized."
+        exit 1
+        ;;
+esac
+
+# alias emacs='emacsclient -nw'
 
 # https://github.com/eza-community/eza
 alias ls='eza -F'
