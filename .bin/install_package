@@ -1,0 +1,17 @@
+#!/bin/bash
+
+package=$1
+# echo "package to install: $package"
+
+if ! command -v $package &> /dev/null; then
+
+    echo "Package '$package' not installed. Installing..."
+    if command -v apt &> /dev/null; then
+        sudo apt update
+        sudo apt install -y "$package"
+    elif command -v brew &> /dev/null; then
+        brew install "$package"
+    else
+        echo "Package manager not found. Please install '$package' manually."
+    fi
+fi

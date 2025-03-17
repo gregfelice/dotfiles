@@ -1,4 +1,7 @@
 
+# install packages if needed
+install_package pyenv
+
 export PKG_CONFIG_PATH="/opt/homebrew/opt/tcl-tk/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 # brew version of python, etc

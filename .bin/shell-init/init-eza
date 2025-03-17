@@ -1,3 +1,5 @@
 
+install_package eza
+
 # https://github.com/eza-community/eza-themes 
 EZA_CONFIG_DIR=$HOME/.config/eza
