@@ -28,8 +28,6 @@ source $INI/init-node              # node package managers, runtimes
 source $INI/init-ssh               # ssh-agent configs, etc
 source $INI/init-dotfile-config    # git aliases to manage dotfile versioning
 
-print -P "%F{yellow}--------------------------------------------------------------------------------------------------%f"
 echo "\n"
 fortune
 echo "\n"
-print -P "%F{yellow}--------------------------------------------------------------------------------------------------%f"

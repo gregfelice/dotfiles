@@ -15,7 +15,7 @@ case "$OS" in
         ;;
 esac
 
-# alias emacs='emacsclient -nw'
+alias emacs='emacsclient -nw'
 
 # https://github.com/eza-community/eza
 alias ls='eza -F'

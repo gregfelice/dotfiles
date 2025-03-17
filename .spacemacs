@@ -605,8 +605,13 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  )
 
+  (add-hook 'spacemacs/init-hook (lambda ()
+                                   (with-eval-after-load 'evil-mode
+                                     (if evil-normal-state-map
+                                         (define-key evil-normal-state-map (kbd "C-z") 'suspend-emacs)
+                                       (message "evil-normal-state-map is nil!")))))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
