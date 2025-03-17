@@ -4,15 +4,12 @@ if [[ "$OS" == "Darwin" ]]; then
     brew install pyenv
 elif [[ "$OS" == "Linux" ]]; then
     curl -fsSL https://pyenv.run | bash
+    rehash
 else
   echo "Unknown OS"
 fi
 
-
 export PKG_CONFIG_PATH="/opt/homebrew/opt/tcl-tk/lib/pkgconfig:$PKG_CONFIG_PATH"
-
-# brew version of python, etc
-# PYTHON_PATH=/opt/homebrew/opt/python@3.12/libexec/bin
 
 # PyEnv
 export PYENV_ROOT="$HOME/.pyenv"
