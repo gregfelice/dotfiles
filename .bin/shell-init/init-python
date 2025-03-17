@@ -1,6 +1,13 @@
 
-# install packages if needed
-install_package pyenv
+# custom pyenv install
+if [[ "$OS" == "Darwin" ]]; then
+    brew install pyenv
+elif [[ "$OS" == "Linux" ]]; then
+    curl -fsSL https://pyenv.run | bash
+else
+  echo "Unknown OS"
+fi
+
 
 export PKG_CONFIG_PATH="/opt/homebrew/opt/tcl-tk/lib/pkgconfig:$PKG_CONFIG_PATH"
 

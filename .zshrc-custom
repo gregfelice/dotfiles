@@ -1,3 +1,4 @@
+export OS=$(uname -s)
 
 # all aliases go here.
 source $HOME/.aliases
