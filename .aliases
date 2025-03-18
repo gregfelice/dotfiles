@@ -1,5 +1,3 @@
-
-
 OS=$(uname -s)
 
 case "$OS" in
@@ -15,7 +13,12 @@ case "$OS" in
         ;;
 esac
 
-alias emacs='emacsclient -nw'
+if emacsclient -n -e '(message "")' > /dev/null 2>&1; then
+    alias emacs='emacsclient -nw'
+else
+    alias emacs="emacs -nw"
+fi
+
 
 # https://github.com/eza-community/eza
 alias ls='eza -F'
