@@ -28,6 +28,7 @@ source $INI/init-llms              # anything related to local or remote llms
 source $INI/init-node              # node package managers, runtimes
 source $INI/init-ssh               # ssh-agent configs, etc
 source $INI/init-dotfile-config    # git aliases to manage dotfile versioning
+source $INI/init-misc              # fortune, heh 
 
 echo "\n"
 fortune
