@@ -15,12 +15,12 @@
 #   Storage devices: I/O, capacity
 #   Controllers: storage, network cards
 #   Interconnects: CPUs, memory, I/O
-
+b
 function banner () {
     echo -e "\n= $1 ======================================"
 }
 
-banner "CPU Utilization"
+anner "CPU Utilization"
 ps -eo pid,%cpu,command --sort=-%cpu | head -4
 
 banner "CPU Saturation"
