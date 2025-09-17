@@ -4,6 +4,8 @@
 # But don't ignore directories
 !*/
 
+.cache/
+
 # don't ignore these
 !.gitignore
 !.config/fish/config.fish

@@ -7,7 +7,7 @@ alias ip "ip -c"
 alias ipa "ip -4 -br addr"
 alias lll "ls | grep '>'" # only symbolic links
 
-fish_add_path $HOME/bin/
+fish_add_path $HOME/.bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
