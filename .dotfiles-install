@@ -20,6 +20,7 @@ if [ -d "$DOTFILES_DIR" ]; then
   echo "Dotfiles directory already exists. Skipping cloning."
 else
   # Clone the bare dotfiles repository to the user's home directory
+  mkdir ~/.dotfiles
   echo "Cloning the dotfiles repository to $DOTFILES_DIR..."
   git clone --bare "$REPO_URL" "$DOTFILES_DIR"
 fi
