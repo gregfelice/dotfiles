@@ -10,7 +10,7 @@ DOTFILES_DIR="$HOME/.dotfiles"
 REPO_URL="git@github.com:gregfelice/dotfiles.git"
 
 # Check if git is installed
-if ! command -v git &>/dev/null; then
+if ! command -v /usr/bin/git &>/dev/null; then
   echo "Error: git is not installed. Please install git and try again."
   exit 1
 fi
@@ -21,12 +21,12 @@ if [ -d "$DOTFILES_DIR" ]; then
 else
   # Clone the bare dotfiles repository
   echo "Cloning the dotfiles repository to $DOTFILES_DIR..."
-  git clone --bare "$REPO_URL" "$DOTFILES_DIR"
+  /usr/bin/git clone --bare "$REPO_URL" "$DOTFILES_DIR"
 fi
 
 # Set up the dotfiles alias
 dotfiles() {
-  git --git-dir="$DOTFILES_DIR" --work-tree="$HOME" "$@"
+  /usr/bin/git --git-dir="$DOTFILES_DIR" --work-tree="$HOME" "$@"
 }
 
 # Back up any conflicting dotfiles
@@ -52,7 +52,7 @@ elif [ -n "$(echo "$SHELL" | grep "fish")" ]; then
   CONFIG_FILE="$HOME/.config/fish/config.fish"
 else
   echo "Warning: Could not determine shell. Please add the following alias to your shell configuration file manually:"
-  echo "alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'"
+  echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'"
   exit 0
 fi
 
@@ -60,7 +60,7 @@ if ! grep -q "alias dotfiles=" "$CONFIG_FILE"; then
   echo "Adding alias to $CONFIG_FILE"
   echo "" >>"$CONFIG_FILE"
   echo "# Dotfiles alias" >>"$CONFIG_FILE"
-  echo "alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >>"$CONFIG_FILE"
+  echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >>"$CONFIG_FILE"
 fi
 
 echo "Dotfiles installation complete!"
