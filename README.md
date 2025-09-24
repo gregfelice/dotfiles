@@ -5,5 +5,5 @@
 Run the following command to clone and install:
 
 ```bash
-git clone https://github.com/gregfelice/dotfiles.git ~/.dotfiles && sh ~/.dotfiles/install.sh
+curl -sSfL https://raw.githubusercontent.com/gregfelice/dotfiles/main/install.sh | sh
 ```
