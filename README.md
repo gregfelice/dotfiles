@@ -1,9 +1,9 @@
 # My Dotfiles
 
-## Installation
+## Automatic Installation
+
+Run the following command to clone and install:
 
 ```bash
-git clone git@github.com:gregfelice/dotfiles.git
-cd dotfiles
-sh install.sh
+git clone https://github.com/gregfelice/dotfiles.git ~/.dotfiles && sh ~/.dotfiles/install.sh
 ```
