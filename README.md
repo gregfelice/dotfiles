@@ -3,5 +3,7 @@
 ## Installation
 
 ```bash
-curl -sSfL https://raw.githubusercontent.com/gregfelice/dotfiles/main/install.sh | sh
+git clone git@github.com:gregfelice/dotfiles.git
+cd dotfiles
+sh install.sh
 ```
