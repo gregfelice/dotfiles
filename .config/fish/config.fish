@@ -10,7 +10,7 @@ alias lll "ls | grep '>'" # only symbolic links
 fish_add_path $HOME/.bin
 
 # zoxide cd tool
-zoxide init fish | source
+# zoxide init fish | source
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
