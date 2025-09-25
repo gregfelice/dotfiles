@@ -7,7 +7,7 @@ set -e
 
 # Variables
 DOTFILES_DIR="$HOME/.dotfiles"
-REPO_URL="git@github.com:gregfelice/dotfiles.git"
+REPO_URL="https://github.com/gregfelice/dotfiles.git"
 
 # Check if git is installed
 # if ! command -v /usr/bin/git &>/dev/null; then
