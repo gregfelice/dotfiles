@@ -24,3 +24,6 @@ else
     end
 end
 # <<< conda initialize <<<
+
+# Dotfiles alias
+alias dotfiles='/usr/bin/git --git-dir=/home/gregf/.dotfiles/ --work-tree=/home/gregf'
