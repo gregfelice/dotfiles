@@ -1,5 +1,5 @@
-if test -f ./config.local.fish
-    source ./config.local.fish
+if test -f $HOME/.config/fish/config.local.fish
+    source $HOME/.config/fish/config.local.fish
 end
 
 alias v nvim
