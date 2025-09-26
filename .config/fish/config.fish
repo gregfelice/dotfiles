@@ -8,6 +8,7 @@ alias ipa "ip -4 -br addr"
 alias lll "ls | grep '>'" # only symbolic links
 
 fish_add_path $HOME/.bin
+fish_add_path $HOME/.local/bin
 
 # zoxide
 if type -q zoxide
