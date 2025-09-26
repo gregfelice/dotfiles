@@ -9,8 +9,21 @@ alias lll "ls | grep '>'" # only symbolic links
 
 fish_add_path $HOME/.bin
 
-# zoxide cd tool
-# zoxide init fish | source
+# zoxide
+if type -q zoxide
+    echo "zoxide already installed."
+else
+    echo "installing zoxide."
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+end
+zoxide init fish | source
+
+if type -q fzf
+    echo "fzf already installed."
+else
+    echo "installing fzf."
+    sudo apt install fzf
+end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
