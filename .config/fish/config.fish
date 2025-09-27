@@ -7,21 +7,27 @@ alias ip "ip -c"
 alias ipa "ip -4 -br addr"
 alias lll "ls | grep '>'" # only symbolic links
 
+if not type -q eza
+    echo "installing eza."
+    sudo apt install eza
+end
+
+alias la 'eza -a --color=always --group-directories-first --icons'
+alias ll 'eza -l --color=always --group-directories-first --icons'
+alias ls 'eza -al --color=always --group-directories-first --icons'
+alias lt 'eza -aT --color=always --group-directories-first --icons'
+
 fish_add_path $HOME/.bin
 fish_add_path $HOME/.local/bin
 
 # zoxide
-if type -q zoxide
-    echo "zoxide already installed."
-else
+if not type -q zoxide
     echo "installing zoxide."
     curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 end
 zoxide init fish | source
 
-if type -q fzf
-    echo "fzf already installed."
-else
+if not type -q fzf
     echo "installing fzf."
     sudo apt install fzf
 end
