@@ -4,6 +4,21 @@
 # But don't ignore directories
 !*/
 
+# ignore these directories
+.cargo/
+.config/alacritty/
+.config/emacs/
+.config/swaylock/
+.local/
+.mozilla/
+AUR_builds/
+Desktop/
+Development/
+anaconda3/
+archive/
+bin/
+chrome/
+orgfiles/
 .cache/
 
 # don't ignore these
@@ -12,4 +27,6 @@
 !.config/fish/functions/dotfiles.fish
 !.bin/*
 !.README.md
+!.config/nvim/lua/**
+
 
