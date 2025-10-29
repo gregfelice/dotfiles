@@ -37,6 +37,18 @@ function initialize_conda
     end
 end
 
+function install_tmux
+
+    if not type -q tmux
+        echo "installing tmux"
+        sudo apt install tmux
+    end
+    if not test -d ~/.tmux/plugins/tpm
+        echo "cloning tmux tpm"
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    end
+end
+
 fish_add_path $HOME/.bin
 fish_add_path $HOME/.local/bin
 
