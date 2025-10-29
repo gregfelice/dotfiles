@@ -28,5 +28,5 @@ orgfiles/
 !.bin/*
 !.README.md
 !.config/nvim/lua/**
-
+!.tmux.conf
 
