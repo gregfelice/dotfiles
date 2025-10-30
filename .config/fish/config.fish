@@ -30,7 +30,7 @@ function initialize_conda
         status is-interactive && eval /home/gregf/anaconda3/bin/conda "shell.fish" hook $argv | source
     else
         if test -f "$HOME/anaconda3/etc/fish/conf.d/conda.fish"
-            . "$HOME/anaconda3/etc/fish/conf.d/conda.fish"
+            source "$HOME/anaconda3/etc/fish/conf.d/conda.fish"
         else
             set -x PATH $HOME/anaconda3/bin $PATH
         end
@@ -38,7 +38,6 @@ function initialize_conda
 end
 
 function install_tmux
-
     if not type -q tmux
         echo "installing tmux"
         sudo apt install tmux
@@ -63,6 +62,7 @@ install_eza
 install_zoxide
 install_fzf
 initialize_conda
+install_tmux
 
 alias dotfiles='/usr/bin/git --git-dir=/home/gregf/.dotfiles/ --work-tree=/home/gregf'
 
