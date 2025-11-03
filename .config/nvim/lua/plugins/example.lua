@@ -1,13 +1,19 @@
 return {
+  { "rktjmp/lush.nvim", lazy = true },
 
-  -- gruvbox
+  -- color scehemes
   { "ellisonleao/gruvbox.nvim" },
-
-  -- Configure LazyVim to load gruvbox
+  { "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" } },
+  { "kdheepak/monochrome.nvim" },
+  { "p00f/alabaster.nvim" },
+  { "vague2k/vague.nvim" }, -- nice
+  { "rebelot/kanagawa.nvim" },
+  { "sainnhe/everforest" },
+  { "bluz71/vim-moonfly-colors" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "vague",
     },
   },
 

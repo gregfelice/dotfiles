@@ -3,10 +3,10 @@ function install_eza
         echo "installing eza."
         sudo apt install eza
     end
-    alias la 'eza -a --color=always --group-directories-first --icons'
-    alias ll 'eza -l --color=always --group-directories-first --icons'
-    alias ls 'eza -al --color=always --group-directories-first --icons'
-    alias lt 'eza -l --color=always --group-directories-first --icons -s=modified -r'
+    alias la 'eza -a --group-directories-first --icons'
+    alias ll 'eza -l --group-directories-first --icons'
+    alias ls 'eza -al --group-directories-first --icons'
+    alias lt 'eza -l --group-directories-first --icons -s=modified -r'
 end
 
 function install_zoxide
@@ -56,13 +56,13 @@ alias ip "ip -c"
 alias ipa "ip -4 -br addr"
 alias lll "ls | grep '>'" # only symbolic links
 
-set -x EDITOR nvim
-
 install_eza
 install_zoxide
 install_fzf
 initialize_conda
 install_tmux
+
+set -x EDITOR nvim
 
 alias dotfiles='/usr/bin/git --git-dir=/home/gregf/.dotfiles/ --work-tree=/home/gregf'
 
